@@ -12,12 +12,12 @@ AddEventHandler("plt_plants:plt_sales", function(item,price,label)
       if total and total >= 1 then
         xPlayer.Functions.RemoveItem(item, total)
         xPlayer.Functions.AddMoney('bank', total*price)
-        TriggerClientEvent('okokNotify:Alert', src, 'Title', total.." time "..label.." sell. "..(total*price).. "$ won.", Time, 'type')
+        TriggerClientEvent('okokNotify:Alert', src, 'Title', total.." time "..label.." sell. "..(total*price).. "$ won.", 5000, 'type')
       else
-          TriggerClientEvent('okokNotify:Alert', src, 'Title', 'Yo dont have item!', Time, 'type')
+          TriggerClientEvent('okokNotify:Alert', src, 'Title', 'Yo dont have item!', 5000, 'type')
       end
     else
-      TriggerClientEvent('okokNotify:Alert', src, 'Title', 'Yo dont have item!', Time, 'type')
+      TriggerClientEvent('okokNotify:Alert', src, 'Title', 'Yo dont have item!', 5000, 'type')
     end
 
 end)
